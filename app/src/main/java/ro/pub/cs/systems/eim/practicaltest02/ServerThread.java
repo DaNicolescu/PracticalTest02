@@ -24,12 +24,14 @@ public class ServerThread extends Thread {
         }
 
         this.data = new BitcoinData();
+
+
     }
 
     @Override
     public void run() {
         UpdateDataThread updateDataThread = new UpdateDataThread(this);
-        updateDataThread.run();
+        updateDataThread.start();
 
         try {
             while (!Thread.currentThread().isInterrupted()) {

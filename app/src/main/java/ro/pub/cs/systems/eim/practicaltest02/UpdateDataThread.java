@@ -44,7 +44,7 @@ public class UpdateDataThread extends Thread {
                 }
 
                 if (pageSourceCode == null) {
-                    Log.e(Constants.TAG, "[COMMUNICATION THREAD] Error getting the information from the webservice!");
+                    Log.e(Constants.TAG, "Error getting the information from the webservice!");
                     return;
                 } else
                     Log.i(Constants.TAG, pageSourceCode );

@@ -26,6 +26,7 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
     private TextView textView;
 
     private ServerThread serverThread;
+    private ClientThread clientThread;
 
     private ServerButtonListener serverButtonListener = new ServerButtonListener();
     private class ServerButtonListener implements Button.OnClickListener {
@@ -52,10 +53,14 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
             String clientAddressString = clientAddress.getText().toString();
             String clientPortString = clientPort.getText().toString();
 
-            String informationType = currencyType.getSelectedItem().toString();
+            String currencyTypeString = currencyType.getSelectedItem().toString();
 
             textView.setText("");
 
+            clientThread = new ClientThread(
+                    clientAddressString, Integer.parseInt(clientPortString), currencyTypeString, textView);
+
+            clientThread.start();
         }
 
     }
