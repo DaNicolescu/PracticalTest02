@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Testapp</string>
+    <string name="server">SERVER</string>
+    <string name="port">PORT</string>
+    <string name="server_start">SERVER START</string>
+    <string name="client">CLIENT</string>
+    <string name="address">ADDRESS</string>
+    <string name="get_info">GET INFO</string>
+    <string-array name="currency_types">
+        <item>EUR</item>
+        <item>USD</item>
+    </string-array>
 </resources>
